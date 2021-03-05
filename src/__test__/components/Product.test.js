@@ -14,7 +14,7 @@ describe('<Product/>', () => {
     expect(product.length).toEqual(1);
   });
 
-  test('should be have a click shop', () => {
+  test('should be have a button and click to shop', () => {
     const handleAddToCart = jest.fn();
     const wrapper = mount(
       <ProviderMock>

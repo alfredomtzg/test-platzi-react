@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import Footer from '../../components/Footer';
+import { create } from 'react-test-renderer';
 
 describe('Footer component ', () => {
   const footer = mount(<Footer />);
@@ -15,4 +16,13 @@ describe('Footer component ', () => {
     expect(footer.find(".Footer-copy").text()).toEqual("Todos los Izquierdos Reservados :D");
   });
 
+});
+
+//Snapshot
+
+describe('Footer Snapshot', () => {
+  test('should be have a ui component footer', () => {
+    const footer = create(<Footer />);
+    expect(footer.toJSON()).toMatchSnapshot();
+  });
 });
