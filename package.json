@@ -9,6 +9,7 @@
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
     "test": "jest",
+    "test:update": "jest --updateSnapshot",
     "test:watch": "jest --watch"
   },
   "repository": {
