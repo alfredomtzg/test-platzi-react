@@ -14,12 +14,12 @@ describe('Reducers test', () => {
       type: 'ADD_TO_CART',
       payload,
     };
-    const expect = {
+    const expected = {
       cart: [
         ProductMock,
       ],
     };
-
+    expect(reducer(initialState, action)).toEqual(expected);
   });
 
 });
