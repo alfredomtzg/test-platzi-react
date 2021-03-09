@@ -5,5 +5,21 @@ describe('Reducers test', () => {
   test('should return initial state', () => {
     expect(reducer({}, '')).toEqual({});
   });
+  test('should ADD_TO_CART', () => {
+    const initialState = {
+      cart: [],
+    };
+    const payload = ProductMock;
+    const action = {
+      type: 'ADD_TO_CART',
+      payload,
+    };
+    const expect = {
+      cart: [
+        ProductMock,
+      ],
+    };
+
+  });
 
 });
