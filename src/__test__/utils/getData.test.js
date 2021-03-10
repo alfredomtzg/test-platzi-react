@@ -5,7 +5,7 @@ describe('Fetch API', () => {
     fetch.resetMocks();
   });
 
-  test('should be call API and return data', () => {
+  test('should be call API and return data and check if this have a google page', () => {
     fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
 
     getData('https://google.com')
